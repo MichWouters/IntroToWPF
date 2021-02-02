@@ -110,6 +110,7 @@ namespace MyWeatherApp
         {
             LblResult.Content = 0;
             _lastNumber = 0;
+            _result = 0;
         }
     }
 

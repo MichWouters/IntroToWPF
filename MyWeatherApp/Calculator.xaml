@@ -35,38 +35,59 @@
         <!--Row 1-->
         <Button x:Name="BtnReset"
                 Content="AC"
+                Margin="5"
+                Background="DarkGray"
+                Foreground="White"
                 Grid.Row="1" 
                 Click="btnReset_Click" />
+        
         <Button x:Name="BtnNegative"
+                Background="DarkGray" 
+                Foreground="White"
                 Content="+/-"
+                Margin="5"
                 Grid.Row="1"
                 Grid.Column="1" />
+        
         <Button x:Name="BtnPercentage"
                 Content="%"
+                Background="DarkGray"
+                Foreground="White"
+                Margin="5"
                 Grid.Row="1"
                 Grid.Column="2" />
+        
         <Button x:Name="BtnDivision"
                 Content="/"
+                Margin="5"
+                Background="Orange"
+                Foreground="White"
                 Grid.Row="1"
                 Grid.Column="3" 
                 Click="OperationButton_Click" />
 
         <!--Row 2-->
         <Button x:Name="BtnSeven"
+                Margin="5"
                 Content="7"
                 Grid.Row="2"
                 Click="NumberButton_Click" />
         <Button x:Name="BtnEight"
+                Margin="5"
                 Content="8"
                 Grid.Row="2"
                 Grid.Column="1"
                 Click="NumberButton_Click" />
         <Button x:Name="BtnNine"
+                Margin="5"
                 Content="9"
                 Grid.Row="2"
                 Grid.Column="2"
                 Click="NumberButton_Click" />
         <Button x:Name="BtnMultiplication"
+                Margin="5"
+                Background="Orange"
+                Foreground="White"
                 Content="*"
                 Grid.Row="2"
                 Grid.Column="3" 
@@ -74,20 +95,26 @@
 
         <!--Row 3-->
         <Button x:Name="BtnFour"
+                Margin="5"
                 Content="4"
                 Grid.Row="3"
                 Click="NumberButton_Click" />
         <Button x:Name="BtnFive"
+                Margin="5"
                 Content="5"
                 Grid.Row="3"
                 Grid.Column="1"
                 Click="NumberButton_Click" />
         <Button x:Name="BtnSix"
+                Margin="5"
                 Content="6"
                 Grid.Row="3"
                 Grid.Column="2"
                 Click="NumberButton_Click" />
         <Button x:Name="BtnMinus"
+                Margin="5"
+                Background="Orange"
+                Foreground="White"
                 Content="-"
                 Grid.Row="3"
                 Grid.Column="3" 
@@ -95,20 +122,26 @@
 
         <!--Row 4-->
         <Button x:Name="BtnOne"
+                Margin="5"
                 Content="1"
                 Grid.Row="4"
                 Click="NumberButton_Click" />
         <Button x:Name="BtnTwo"
+                Margin="5"
                 Content="2"
                 Grid.Row="4"
                 Grid.Column="1"
                 Click="NumberButton_Click" />
         <Button x:Name="BtnThree"
+                Margin="5"
                 Content="3"
                 Grid.Row="4"
                 Grid.Column="2"
                 Click="NumberButton_Click" />
         <Button x:Name="BtnPlus"
+                Margin="5"
+                Background="Orange"
+                Foreground="White"
                 Content="+"
                 Grid.Row="4"
                 Grid.Column="3" 
@@ -116,15 +149,20 @@
 
         <!--Row 5-->
         <Button x:Name="BtnZero"
+                Margin="5"
                 Content="0"
                 Grid.ColumnSpan ="2"
                 Grid.Row="5"
                 Click="NumberButton_Click" />
         <Button x:Name="BtnDot"
+                Margin="5"
                 Content="."
                 Grid.Row="5"
                 Grid.Column="2" Click="btnDot_Click" />
         <Button x:Name="BtnEquals"
+                Margin="5"
+                Background="Orange"
+                Foreground="White"
                 Content="="
                 Grid.Row="5"
                 Grid.Column="3" 

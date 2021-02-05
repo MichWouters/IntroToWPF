@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
-        
+        <Button Content="Button" 
+                HorizontalAlignment="Left" 
+                Background="{StaticResource operationsColor }"
+                Margin="360,217,0,0" 
+                VerticalAlignment="Top" 
+                RenderTransformOrigin="1.121,0.563"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="177,321,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

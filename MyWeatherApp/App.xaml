@@ -4,6 +4,33 @@
              xmlns:local="clr-namespace:MyWeatherApp"
              StartupUri="Calculator.xaml"> <!--Set start-up window-->
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="operationsColor" Color="Orange"/>
+        <SolidColorBrush x:Key="specialOperationColor" Color="DarkGray" />
+
+        <!-- Implicit style -> Affects ALL buttons -->
+        <Style TargetType="Button" x:Name="Default">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+
+        <!--Explicit style -> Define on the object level -->
+        <Style TargetType="Button" x:Key="operationButtonStyle" >
+            <Setter Property="Background" Value="{StaticResource operationsColor}" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+
+        <!--Explicit style-->
+        <Style TargetType="Button" x:Key="specialOperationButtonStyle" BasedOn="{StaticResource operationButtonStyle}">
+            <Setter Property="Background" Value="{StaticResource specialOperationColor}" />
+        </Style>
+
+        <!-- Implicit style --> 
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="70" />
+        </Style>
+        
     </Application.Resources>
 </Application>

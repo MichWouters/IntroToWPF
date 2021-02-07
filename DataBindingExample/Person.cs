@@ -1,21 +1,45 @@
-﻿namespace DataBindingExample
-{
-    public class Person
-    {
-        public int Age { get; set; }
+﻿using System.ComponentModel;
 
-        public string Name { get; set; }
+namespace DataBindingExample
+{
+    public class Person : INotifyPropertyChanged
+    {
+        private int age;
+
+        public int Age
+        {
+            get { return age; }
+            set
+            {
+                age = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string name;
+
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                name = value;
+                OnPropertyChanged();
+            }
+        }
 
         public string Hobbies { get; set; }
 
-        public int SelectedValue { get; set; }
-
-        public Person()
+        public override string ToString()
         {
-            Age = 24;
-            Name = "Jack";
-            Hobbies = "Hiking";
-            SelectedValue = 5;
+            return name.ToString(); 
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged(string name = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 }

@@ -19,7 +19,7 @@
             <Label Content="Name:" Width="100" />
             <TextBox Width="200" Text="{Binding Name}" Height="20" />
         </StackPanel>
-
+        
         <StackPanel Orientation="Horizontal">
             <Label Content="Age:" Width="100"/>
             <TextBox Width="200" Text="{Binding Age}" Height="20" />

@@ -1,0 +1,43 @@
+﻿<Window x:Class="DataBindingDeepDive.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBindingDeepDive"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <!--Expose a class in a namespace-->
+    <Window.Resources>
+        <local:Person x:Key="myFriend"  />
+    </Window.Resources>
+    
+    
+    <StackPanel x:Name="myStackPanel">
+        
+        <!--Set the data context in front-end for the entire stack panel-->
+        <StackPanel.DataContext>
+            <Binding Source="{StaticResource myFriend}" />
+        </StackPanel.DataContext>
+        
+        
+        <StackPanel.Resources>
+            <Style TargetType="TextBox">
+                <Setter Property="Width" Value="200" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+                <Setter Property="Margin" Value="10,0,0,0"/>
+            </Style>
+        </StackPanel.Resources>
+        
+        <!--Bind the Properties of an object (Source) to Front-End Controls(Target)-->
+        <Label Content="Name:" />
+        <TextBox Text="{Binding Name}" />
+
+        <Label Content="Age:" />
+        <TextBox Text="{Binding Age}" />
+
+        <Label Content="Residence:" />
+        <TextBox Text="{Binding Residence}" />
+
+        <Button Content="Click Me!" Margin="0,10,0,0" />
+    </StackPanel>
+</Window>

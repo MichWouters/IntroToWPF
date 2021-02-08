@@ -26,18 +26,21 @@
                 <Setter Property="HorizontalAlignment" Value="Left" />
                 <Setter Property="Margin" Value="10,0,0,0"/>
             </Style>
+
         </StackPanel.Resources>
         
         <!--Bind the Properties of an object (Source) to Front-End Controls(Target)-->
         <Label Content="Name:" />
-        <TextBox Text="{Binding Name}" />
+        <TextBox Text="{Binding Name, Mode=TwoWay}" />
 
         <Label Content="Age:" />
-        <TextBox Text="{Binding Age}" />
+        <TextBox Text="{Binding Age, Mode=TwoWay}" />
 
         <Label Content="Residence:" />
-        <TextBox Text="{Binding Residence}" />
+        <TextBox Text="{Binding Residence, Mode=TwoWay}" />
 
-        <Button Content="Click Me!" Margin="0,10,0,0" />
+        <Label Content="{Binding Name, Mode=OneWay}" />
+
+        <Button Content="Click Me!" Click="Button_Click" Margin="0,10,0,0" />
     </StackPanel>
 </Window>

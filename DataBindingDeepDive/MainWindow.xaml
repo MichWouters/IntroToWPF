@@ -19,7 +19,7 @@
             <Binding Source="{StaticResource myFriend}" />
         </StackPanel.DataContext>
         
-        
+        <!--Set an implicit style for all TextBoxes in this StackPanel-->
         <StackPanel.Resources>
             <Style TargetType="TextBox">
                 <Setter Property="Width" Value="200" />

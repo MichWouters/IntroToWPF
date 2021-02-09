@@ -1,7 +1,9 @@
 ﻿using DataBindingDeepDive.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace DataBindingDeepDive
 {
@@ -36,6 +38,21 @@ namespace DataBindingDeepDive
         private void AddPie_Click(object sender, RoutedEventArgs e)
         {
             pies.Add(new Pie(9, "Rabarber"));
+        }
+
+        private void ListViewItem_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            // Extract selected Pie from ListView
+            var listItem = sender as ListViewItem;
+            Pie pie = listItem.Content as Pie;
+
+            //Pie selectedPie = pies.FirstOrDefault(pie => pie.ID == 5);
+
+            if (pie != null)
+            {
+                var detailView = new PieDetailView(pie);
+                detailView.ShowDialog();
+            }
         }
     }
 }

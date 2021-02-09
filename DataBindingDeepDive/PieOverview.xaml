@@ -15,10 +15,19 @@
         <ListView x:Name="PieOverViewList"
                   VerticalAlignment="Stretch"
                   ItemTemplate="{StaticResource PieDataTemplate}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <EventSetter Event="MouseLeftButtonUp"
+                                 Handler="ListViewItem_MouseLeftButtonUp" />
+                </Style>
+
+            </ListView.ItemContainerStyle>
         </ListView>
 
         <Button Content="Add Pie"
                 Grid.Row="1"
                 Click="AddPie_Click" />
+
+        <Image x:Name="MyImage" />
     </Grid>
 </Window>

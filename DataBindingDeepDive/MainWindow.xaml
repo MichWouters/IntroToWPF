@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataBindingDeepDive"
+        xmlns:foo="clr-namespace:DataBindingDeepDive.Models"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="400">
     <!--Expose a class in a namespace-->
@@ -34,10 +35,12 @@
         <TextBox Text="{Binding Name, Mode=TwoWay}" />
 
         <Label Content="Age:" />
-        <TextBox Text="{Binding Age, Mode=TwoWay}" />
+        <TextBox Text="{Binding Age, Mode=OneWay}" />
 
         <Label Content="Residence:" />
         <TextBox Text="{Binding Residence, Mode=TwoWay}" />
+
+        <Slider Value="{Binding Age}" Maximum="80" />
 
         <Label Content="{Binding Name, Mode=OneWay}" />
 

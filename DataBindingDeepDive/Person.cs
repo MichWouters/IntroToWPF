@@ -7,8 +7,8 @@ namespace DataBindingDeepDive
     public class Person : INotifyPropertyChanged
     {
         private string _name;
-
-        public MyEnum myEnum { get; set; }
+        private int _age;
+        private string _residence;
 
         public string Name
         {
@@ -22,19 +22,15 @@ namespace DataBindingDeepDive
             }
         }
 
-        private int _age;
-
         public int Age
         {
             get { return _age; }
             set
             {
                 _age = value;
-                OnPropertyChanged();
+               OnPropertyChanged();
             }
         }
-
-        private string _residence;
 
         public string Residence
         {

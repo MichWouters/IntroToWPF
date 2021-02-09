@@ -21,9 +21,6 @@ namespace DataBindingDeepDive
 
             // Set binding in code-behind
             myStackPanel.DataContext = myFriendInCodeBehind;
-
-            var person = new Person();
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

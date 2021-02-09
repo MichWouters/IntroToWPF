@@ -12,7 +12,7 @@ namespace DataBindingDeepDive
 
         public string Name
         {
-            get { return _name; }
+            get => _name;
             set
             {
                 _name = value;
@@ -24,17 +24,17 @@ namespace DataBindingDeepDive
 
         public int Age
         {
-            get { return _age; }
+            get => _age;
             set
             {
                 _age = value;
-               OnPropertyChanged();
+             
             }
         }
 
         public string Residence
         {
-            get { return _residence; }
+            get => _residence;
             set
             {
                 _residence = value;

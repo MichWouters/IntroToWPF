@@ -2,8 +2,22 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:DataBindingDeepDive"
-             StartupUri="MainWindow.xaml">
+             StartupUri="PieOverview.xaml">
     <Application.Resources>
-         
+        <Style TargetType="TextBlock" x:Key="PieName" >
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Foreground" Value="Green" />
+        </Style>
+
+        <!--Generate a Xaml layout X amount of times for each item in the listview-->
+        <DataTemplate x:Key="PieDataTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding Image}" />
+                <StackPanel>
+                    <TextBlock Text="{Binding Name}" Style="{StaticResource PieName}" />
+                    <TextBlock Text="{Binding Price}" />
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
     </Application.Resources>
 </Application>
